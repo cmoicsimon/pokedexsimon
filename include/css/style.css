@@ -1,0 +1,732 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(img/background.png);
+	background-size:initial;
+}
+
+h1 {
+	font-size: 30px;
+	margin: 10px 0;
+}
+
+p {
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MENU*/
+
+.wraper {
+	background: url(img/backgroundnoir.png);
+	position: relative;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	font-weight: bold;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 85px;
+}
+
+.liens {
+	display: inline-flex;
+}
+
+.liens .lien {
+	padding: 40px 0;
+}
+
+.liens .lien-mega {
+	height: 100%;
+}
+
+.liens .lien button {
+	color: white;
+	padding: 15px 30px;
+	font-size: 18px;
+	border-style: none;
+	background-color: transparent;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.liens .lien button:hover {
+	background-color: #FF3333;
+	border-radius: 1rem;
+	transition: all 0.2s ease-in;
+	color: white;
+}
+
+.liens .lien .activate {	
+	color: #FF3333;
+}
+
+.megamenu {
+	position: absolute;
+	background-color: #919191;
+	background-image: url(img/background.png);
+	background-size: initial;
+	top: 85px;
+	left: 0;
+	padding: 5px;
+	display: none;	
+}
+
+.lien-mega:hover .megamenu{
+	display: block;
+	transition: all 0.3s ease-in;
+	top: 85px;
+}
+
+.lien-mega:hover .megamenu .container {
+	animation: apparitionContainers 0.15s forwards;
+}
+
+
+@keyframes apparitionContainers {
+	0% {
+		box-shadow: #000000;
+		max-height: 0px;
+	}
+	30% {
+		box-shadow: #000000;
+	}
+	100% {
+		box-shadow: #000000;
+		max-height: 65px;
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+
+.container ul li {
+	margin: 20px 0;
+}
+
+.container .liens li a {
+	padding: 0px;
+}
+
+.container .liens li a:hover {
+	padding: 0px;
+	background-color: #919191;
+	transition: 0.6s ease-in-out;
+}
+
+.container .liens li a:hover img {
+	transform: scale(1.2);
+	transition: 0.3s ease-in-out;
+}
+
+.container img {
+	width: 70%;
+	border-radius: 25px; 	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CARTES POKEDEX*/
+
+.pokemon-pokedex {
+	padding: 30px;
+	margin-right: 40px;
+	margin-left: 40px;
+	margin-top: 100px;
+}
+
+
+.pokemon-pokedex h1{
+	margin-bottom: 70px;
+	text-align: center;
+}
+
+ul#liste-pokemon {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+	margin-bottom: 0;
+}
+
+ul#liste-pokemon li {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	margin: 90px 9px;
+	margin-top: 0;
+}
+
+ul#liste-pokemon li .pokemonimg{
+	display: block;
+    height: 70%;
+	margin: auto;
+}
+
+ul#liste-pokemon li a#type .typeimg{
+	width: 77.94px;
+	margin-top: 2px;
+	border-radius: 25px; 
+}
+
+ul#liste-pokemon li a#type {
+	width: 35% 	;
+}
+
+ul#liste-pokemon li a#type:hover .typeimg{
+	transform: scale(1.2);
+	transition: ease-in-out 0.3s ;
+}
+
+ul#liste-pokemon li .carte {
+	background: #F2F2F2;
+    float: left;
+    border: solid 6px #033190;
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+	height: 300px;
+	padding-top: 20%;
+	opacity: 0.9;
+}
+
+ul#liste-pokemon li .carte:hover {
+	transform: scale(1.06);
+	background :url(img/paysage4.png);
+	background-size: cover;
+	border: solid 6px #033190;
+	transition: ease-in-out 0.3s;
+	opacity: 1;
+}
+
+ul#liste-pokemon li .carte:hover img {
+	transform: scale(1.3);
+	transition: ease-in-out 0.2s;
+}
+
+ul#liste-pokemon li .infos {
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGE INDEX*/
+
+.top {
+	margin-top: 150px;
+	
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+}
+
+.top .info {
+	width: 40%;
+	margin-right: 30px;
+}
+
+.top .dresseur {
+	width: 550px;
+	border: solid 6px #033190;
+    border-radius: 20px 40px 20px 40px;
+    overflow: hidden;
+	margin-left: 30px;
+}
+
+.top .dresseur img {
+	display: block;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGE TYPE*/
+
+
+
+.pokemon-pokedex#page-type {
+	margin-bottom: 150px;
+}
+
+h1#page-type {
+	margin: 20px 0;
+	text-align: left;
+	margin-left: 40px;
+	margin-bottom: 10px;
+}
+ div#description p {
+	text-align: justify;
+	margin-bottom: 30px;
+	margin-left: 40px;
+ }
+
+ div#dessus-type{
+	margin: 60px 10px;
+	border: solid 6px #033190;
+	border-radius: 20px 40px 20px 40px;
+	background-color: #fff;
+	background-image: url(img/background.png);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGE POKEMON*/
+
+.page-pokemon {
+	display: flex;
+	margin-top: 80px;
+	padding: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+	margin-bottom: 200px;
+}
+
+.page-pokemon div#images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+    float: left;
+    border: solid 6px #033190;
+    position: relative;
+    border-radius: 10px;
+	background-image: url(img/fond.png);
+	background-size: cover;
+	margin: 30px;
+}
+
+.page-pokemon div#images img {
+	width: 70%;
+	margin-top: 2px;
+	border-radius: 25px; 
+	margin: 0px 20px;
+}
+
+
+
+.page-pokemon div#informations {
+    width: 30%;
+	margin: 50px;
+}
+
+.page-pokemon div#infoplus  {
+	width: 30%;
+	margin: 50px;
+}
+
+.page-pokemon div#infoplus ul li#types a img  {
+	width: 80px;
+    border-radius: 25px;
+	margin: 0 10px;
+}
+
+.page-pokemon div#infoplus ul li#types a:hover img  {
+	transform: scale(1.2);
+	transition: ease-in-out 0.3s;
+}
+
+.page-pokemon div#infoplus ul li#types{
+	align-items: center;
+}
+
+.page-pokemon div#infoplus ul li {
+	margin: 20px 0;
+	font-weight: bold;
+}
+
+li#evolutions a {
+	margin: 50px;
+}
+
+div#infoplus ul li#evolutions a {
+	margin: 0 15px;
+}
+
+div#infoplus ul li#evolutions .evolnone {
+	color: black;
+}
+
+div#infoplus ul li#evolutions .evolnone:hover {
+	opacity: 0.5;
+	transition: ease-in-out 0.3s;
+}
+
+div#infoplus ul li#evolutions .evolact {
+	color: #FF3333;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+div#infoplus ul li#evolutions .evolact:hover {
+	opacity: 0.5;
+	transition: ease-in-out 0.3s;
+}
+
+.page-pokemon div#gifs  {
+	width: 30%;
+	margin: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    float: left;
+    border: solid 6px #033190;
+    position: relative;
+    border-radius: 10px;
+	background-image: url(img/fond2.png);
+	background-size: cover;
+	margin: 30px;
+}
+
+.page-pokemon div#gifs img {
+	width: 35%;
+	margin-top: 2px;
+	border-radius: 25px; 
+	margin: 0px 20px;
+}
+
+
+div#descriptions {
+	width: 100%;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BOUTTON HAUT DE PAGE*/
+
+
+
+#scrollUpButton {
+	display: inline-block;
+	position: fixed;
+	bottom: -80px; /* Déplacez le bouton en dehors de la vue initiale */
+	right: 30px;
+	color: #033190;
+	border: none;
+	border-radius: 5px;
+	margin-left: 1420px;
+	width: 50px;
+	height: 50px;
+	font-size: 25px;   
+	font-weight: bold;
+	background-color: lightgrey;
+	cursor: pointer;
+	transition: background-color 0.3s ease, bottom 0.5s ease; /* Ajout d'une transition pour un effet visuel */
+}
+
+#scrollUpButton:hover {
+	background-color: #FF3333;
+	transition: 0.1s ease-in-out;
+	transform: scale(1.05);
+	color: #F2F2F2;
+	font-weight: bold;
+}
+
+
+
+
+
+
+/*BOUTTON CHARGER 20 POKEMONS*/
+
+
+.pokemon20 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 250px;
+}
+
+
+.pokemon20 #btn20 {
+	align-self: flex-end;
+	padding: 15px 30px;
+	outline: 0;
+	border: 0;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 500;
+	background-color:lightgrey;
+	color: #033190;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+.pokemon20 #btn20:hover {
+	background-color: #FF3333;
+	border-radius: 1rem;
+	transition: all 0.2s ease-in;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*FOOTER*/
+
+footer {
+	display: flex;
+	justify-content: space-evenly;
+	background-image: url(img/backgroundnoir.png);
+	background-size:initial;
+	width: 100%;
+	height: 500px;
+}
+
+
+
+footer div img {
+	width: 100%;
+	height: 490px;
+	margin-top: 10px;
+}
+
+.form {
+	margin-top: 100px;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 10px;
+	width: 300px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  }
+  
+  .form .title {
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: -1px;
+	line-height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+  }
+  
+  .form input {
+	outline: 0;
+	border: 1px solid rgb(219, 213, 213);
+	padding: 8px 14px;
+	border-radius: 8px;
+	width: 100%;
+	height: 50px;
+  }
+  
+  .form textarea {
+	border-radius: 8px;
+	height: 100px;
+	width: 100%;
+	resize: none;
+	outline: 0;
+	padding: 8px 14px;
+	border: 1px solid rgb(219, 213, 213);
+  }
+  
+  .form button {
+	align-self: flex-end;
+	padding: 15px 30px;
+	outline: 0;
+	border: 0;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 500;
+	background-color:transparent;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+  }
+
+.form button:hover {
+	background-color: #FF3333;
+	border-radius: 1rem;
+	transition: all 0.2s ease-in;
+	color: white;
+}
