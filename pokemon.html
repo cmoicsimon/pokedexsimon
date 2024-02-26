@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="include/css/style.css">
+	<title>Pokédex | </title>
+</head>
+<body>
+	<div class="wraper">
+		<nav class="navbar">
+			<div class="logo">
+				<a href="index.html"><img src="img/pokemon.gif"></a>
+			</div>
+			<ul class="liens">
+				<li class="lien">
+					<button class="activate" onclick="window.location.href = 'index.html'">Pokédex</button>
+				</li>
+				<li class="lien lien-mega">
+					<button>Types</button> 
+					<div class="megamenu">
+						<div class="container">
+							<ul class="liens" id="liste-types"></ul>
+						</div>
+					</div>
+				</li>
+				<li class="lien">
+					
+						<button id="scrollButton" onclick="scrollToBottom()">Nous contacter</button> 
+					
+				</li>
+			</ul>
+		</nav>
+	</div>
+	
+	<h1></h1>
+	<section class="page-pokemon">
+		<div id="images">
+			<img id="image">
+		</div>
+		<div id="informations">
+			<h1 id="nom"></h1>
+			<p id="description"></p>
+		</div>
+		<div id="infoplus">
+			<ul>
+				<li id="noms"></li>
+				<li id="taille"></li>
+				<li id="poids"></li>
+				<li id="types"></li>
+				<li id="evolutions"></li>
+			</ul>
+		</div>
+		<div id="gifs">
+			<img id="gif">
+		</div>
+		</section>	
+	</section>
+	<section class="haut-page">
+		<button id="scrollUpButton" onclick="scrollToTop()">↑</button>
+	</section>
+	<footer>
+		<form id="basdepage" class="form">
+            <div class="title"><h1>Nous contacter</h1></div>
+            <input type="text" placeholder= "Sacha du Bourg-Palette" class="input">
+            <textarea placeholder="Ce site me donne envie d'explorer notre monde afin de rencontrer toujours plus de Pokémons !"></textarea>
+            <button>Envoyer</button>
+        </form>
+		<div>
+			<img src="img/sacha.png">
+		</div>
+	</footer>
+	
+	<script src="include/js/data.js" defer></script>
+	<script src="include/js/pokemon.js" defer></script>
+</body>
+</html>

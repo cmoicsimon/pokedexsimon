@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="include/css/style.css">
+	<title>Pokédex</title>
+</head>
+<body>
+	<div class="wraper">
+		<nav class="navbar">
+			<div class="logo">
+				<a href="index.html"><img src="img/pokemon.gif"></a>
+			</div>
+			<ul class="liens">
+				<li class="lien">
+					<button class="activate" onclick="window.location.href = 'index.html'">Pokédex</button>
+				</li>
+				<li class="lien lien-mega">
+					<button>Types</button> 
+					<div class="megamenu">
+						<div class="container">
+							<ul class="liens" id="liste-types"></ul>
+						</div>
+					</div>
+				</li>
+				<li class="lien">
+					
+						<button id="scrollButton" onclick="scrollToBottom()">Nous contacter</button> 
+					
+				</li>
+			</ul>
+		</nav>
+	</div>
+	
+	<section class="top">
+		<div class="info">
+			<h1>Le monde des Pokémons</h1>
+			<p>Les Pokémon sont des créatures remarquables (et parfois mystérieuses) qui peuplent notre univers. Certains vivent aux côtés des humains, alors que d'autres, plus sauvages, ont élu domicile dans les hautes herbes, les grottes, les mers et bien d'autres lieux.</p>
+		</div>
+		<div class="dresseur">
+			<img src="img/paysage1.png">
+		</div>
+	</section>
+	<section class="pokemon-pokedex">
+		<h1>Pokédex de la première génération</h1>
+		<ul id="liste-pokemon"></ul>
+	</section>
+	<section class="haut-page">
+		<button id="scrollUpButton" onclick="scrollToTop()">↑</button>
+	</section>
+	<section class="pokemon20">
+		<button id="btn20" onclick="handleButtonClick(),loadNextTwenty()">Charger d'autres Pokémon</button>
+	</section>
+	<footer>
+		<form id="basdepage" class="form">
+            <div class="title"><h1>Nous contacter</h1></div>
+            <input type="text" placeholder="Professeur Chen" class="input">
+            <textarea placeholder="SUPER SITE !! Je l'utilise souvent pour m'aider dans mes recherches."></textarea>
+            <button>Envoyer</button>
+        </form>
+		<div>
+			<img src="img/chen.png">
+		</div>
+	</footer>
+
+	<script src="include/js/data.js" defer></script>
+	<script src="include/js/main.js" defer></script>
+
+</body>
+</html>

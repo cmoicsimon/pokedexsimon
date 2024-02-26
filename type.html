@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="include/css/style.css">
+	<title>Type | </title>
+</head>
+<body>
+	<div class="wraper">
+		<nav class="navbar">
+			<div class="logo">
+				<a href="index.html"><img src="img/pokemon.gif"></a>
+			</div>
+			<ul class="liens">
+				<li class="lien">
+					<button onclick="window.location.href = 'index.html'">Pokédex</button>
+				</li>
+				<li class="lien lien-mega">
+					<button class="activate">Types</button> 
+					<div class="megamenu">
+						<div class="container">
+							<ul class="liens" id="liste-types"></ul>
+						</div>
+					</div>
+				</li>
+				<li class="lien">
+					
+						<button id="scrollButton" onclick="scrollToBottom()">Nous contacter</button> 
+					
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<section class="pokemon-pokedex" id="page-type">
+		<div id="dessus-type">
+			<h1 id="page-type"></h1>
+			<div id="description"></div>
+		</div>
+		<ul id="liste-pokemon"></ul>
+	</section>
+	<section class="haut-page">
+		<button id="scrollUpButton" onclick="scrollToTop()">↑</button>
+	</section>
+	<footer>
+		<form id="basdepage" class="form">
+            <div class="title"><h1>Nous contacter</h1></div>
+            <input type="text" placeholder="Red" class="input">
+            <textarea placeholder="J'utilise ce site pour me renseigner sur les pokémons des mes adversaires avant mes duels !"></textarea>
+            <button>Envoyer</button>
+        </form>
+		<div>
+			<img src="img/red.png">
+		</div>
+	</footer>
+	<script src="include/js/data.js" defer></script>
+	<script src="include/js/type.js" defer></script>
+</body>
+</html>
